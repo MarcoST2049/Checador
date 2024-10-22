@@ -4,6 +4,8 @@
  */
 package com.mycompany.asistenciasempleados;
 
+import java.awt.Color;
+
 /**
  *
  * @author adria
@@ -26,21 +28,130 @@ public class InterfazRH extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        fondo = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        jSeparator1 = new javax.swing.JSeparator();
+        jLabel1 = new javax.swing.JLabel();
+        radRegistrar = new javax.swing.JRadioButton();
+        radEliminar = new javax.swing.JRadioButton();
+        radEditar = new javax.swing.JRadioButton();
+        jLabel2 = new javax.swing.JLabel();
+        txtUsuario = new javax.swing.JTextField();
+        btnBuscar = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        fondo.setBackground(new java.awt.Color(255, 255, 255));
+        fondo.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        fondo.setForeground(new java.awt.Color(255, 255, 255));
+        fondo.setAutoscrolls(true);
+        fondo.setFont(new java.awt.Font("Roboto Medium", 0, 12)); // NOI18N
+        fondo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel2.setBackground(new java.awt.Color(102, 102, 255));
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 140, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 360, Short.MAX_VALUE)
+        );
+
+        fondo.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 140, 360));
+
+        jSeparator1.setBackground(new java.awt.Color(0, 0, 0));
+        jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
+        fondo.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 60, 550, 10));
+
+        jLabel1.setFont(new java.awt.Font("Roboto Medium", 0, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Configuración de usuarios");
+        fondo.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 10, 540, 40));
+
+        radRegistrar.setBackground(new java.awt.Color(255, 255, 255));
+        radRegistrar.setFont(new java.awt.Font("Roboto Medium", 0, 12)); // NOI18N
+        radRegistrar.setForeground(new java.awt.Color(0, 0, 0));
+        radRegistrar.setText("Registrar");
+        fondo.add(radRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 240, 90, -1));
+
+        radEliminar.setBackground(new java.awt.Color(255, 255, 255));
+        radEliminar.setFont(new java.awt.Font("Roboto Medium", 0, 12)); // NOI18N
+        radEliminar.setForeground(new java.awt.Color(0, 0, 0));
+        radEliminar.setText("Eliminar");
+        radEliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                radEliminarActionPerformed(evt);
+            }
+        });
+        fondo.add(radEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 270, 80, -1));
+
+        radEditar.setBackground(new java.awt.Color(255, 255, 255));
+        radEditar.setFont(new java.awt.Font("Roboto Medium", 0, 12)); // NOI18N
+        radEditar.setForeground(new java.awt.Color(0, 0, 0));
+        radEditar.setText("Editar");
+        fondo.add(radEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 300, 80, -1));
+
+        jLabel2.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setText("Usuario");
+        fondo.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 90, 70, -1));
+
+        txtUsuario.setBackground(new java.awt.Color(255, 255, 255));
+        txtUsuario.setForeground(new java.awt.Color(0, 0, 0));
+        txtUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtUsuarioActionPerformed(evt);
+            }
+        });
+        fondo.add(txtUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 90, 210, 30));
+
+        btnBuscar.setBackground(new java.awt.Color(255, 255, 255));
+        btnBuscar.setForeground(new java.awt.Color(0, 0, 0));
+        btnBuscar.setText("Buscar");
+        btnBuscar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnBuscar.setInheritsPopupMenu(true);
+        btnBuscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBuscarActionPerformed(evt);
+            }
+        });
+        fondo.add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 90, 80, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(fondo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 692, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(fondo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void radEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radEliminarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_radEliminarActionPerformed
+
+    private void txtUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsuarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtUsuarioActionPerformed
+
+    private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
+        // TODO add your handling code here:
+        btnBuscar.setBackground(Color.WHITE);
+    }//GEN-LAST:event_btnBuscarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +189,16 @@ public class InterfazRH extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnBuscar;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JPanel fondo;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JRadioButton radEditar;
+    private javax.swing.JRadioButton radEliminar;
+    private javax.swing.JRadioButton radRegistrar;
+    private javax.swing.JTextField txtUsuario;
     // End of variables declaration//GEN-END:variables
 }
