@@ -4,6 +4,8 @@
  */
 package com.mycompany.asistenciasempleados;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author adria
@@ -117,6 +119,16 @@ public class InterfazPrincipal extends javax.swing.JFrame {
         btnRH.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
         btnRH.setForeground(new java.awt.Color(0, 0, 0));
         btnRH.setText("RH");
+        btnRH.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnRHMouseClicked(evt);
+            }
+        });
+        btnRH.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRHActionPerformed(evt);
+            }
+        });
         jPanel1.add(btnRH, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 240, 100, 50));
 
         Password.setBackground(new java.awt.Color(255, 255, 255));
@@ -138,7 +150,8 @@ public class InterfazPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnEntrarActionPerformed
 
     private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
-        // TODO add your handling code here:
+       txtUsuario.setText("");
+       Password.setText("");
     }//GEN-LAST:event_btnLimpiarActionPerformed
 
     private void btnEntrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEntrarMouseClicked
@@ -154,10 +167,47 @@ public class InterfazPrincipal extends javax.swing.JFrame {
         //validacion de entradas
         
         if (txtUsuario.getText().equals(usuario1) && Pass.equals(contraseñaAdmin)){
-            
-                
+            JOptionPane.showMessageDialog(this, "Entrada Registrada");{
+          
+        }
+           
+        
+        
+        }
+        if (txtUsuario.getText().equals(usuario2) && Pass.equals(contraseñaEmpleado)){
+              JOptionPane.showMessageDialog(this, "Entrada Registrada");{}
+                     
+        }
+        else {
+            JOptionPane.showMessageDialog(this, "Error de ingreso, intente de nuevo");{}
+                     
+        }
     }//GEN-LAST:event_btnEntrarMouseClicked
+
+    private void btnRHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRHActionPerformed
+       
+       
+       
+       
+    }//GEN-LAST:event_btnRHActionPerformed
+
+    private void btnRHMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRHMouseClicked
+        // TODO add your handling code here:
+        String usuario1="Administrador";
+        String contraseñaAdmin="123";
+        String Pass=new String(Password.getPassword());
+        
+        if (txtUsuario.getText().equals(usuario1) && Pass.equals(contraseñaAdmin)){
+            InterfazRH RH= new InterfazRH();
+            RH.setVisible(true);
+            this.dispose();
+    }//GEN-LAST:event_btnRHMouseClicked
+        else{
+            JOptionPane.showMessageDialog(this, "Error de ingreso, intente de nuevo");{}
+            
+        }
     }
+    
     /**
      * @param args the command line arguments
      */

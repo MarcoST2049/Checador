@@ -11,6 +11,8 @@ package com.mycompany.asistenciasempleados;
 public class AsistenciasEmpleados {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        InterfazPrincipal objInterfaz = new InterfazPrincipal();
+        objInterfaz.setVisible(true);
+                
     }
 }
